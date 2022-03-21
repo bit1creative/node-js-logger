@@ -2,6 +2,13 @@ const express = require('express');
 const cors = require('cors');
 // const { httpLogger } = require('./middlewares');
 const { logger } = require('./utils');
+const fs = require('fs');
+
+fs.readdir('.', (err, files) => {
+  files.forEach((file) => {
+    console.log(file);
+  });
+});
 
 const PORT = process.env.PORT || 4040;
 const app = express();
