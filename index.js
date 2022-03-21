@@ -9,13 +9,13 @@ const app = express();
 app.use(cors());
 // app.use(httpLogger);
 
-app.post('/joined/client/:id', (req, res) => {
+app.post('/jitsi/user/joined/:id', (req, res) => {
   logger.info(JSON.stringify({ 'Jitsi user joined': req.params.id }));
   res.send('Logged');
 });
 
-app.post('/joined/psychologist/:id', (req, res) => {
-  logger.info(JSON.stringify({ 'Jitsi psychologist joined': req.params.id }));
+app.post('/jitsi/user/left/:id', (req, res) => {
+  logger.info(JSON.stringify({ 'Jitsi user left': req.params.id }));
   res.send('Logged');
 });
 
