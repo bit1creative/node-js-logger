@@ -1,1 +1,1 @@
-web: npm run start
+web: sudo npm run start
